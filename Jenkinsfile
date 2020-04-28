@@ -7,7 +7,7 @@ pipeline {
       }
     }
     stage('DeployApp') {
-            when { tag "SFrelease-*" }
+            when { tag pattern: "SFrelease-*", comparator: "REGEXP" }
             steps {
                 echo 'Deploying release...'
                 sh 'cd Scaldofragno && ./gradlew app:buildrelease '
