@@ -10,7 +10,7 @@ pipeline {
             when { tag pattern: 'SFrelease-*', comparator: "REGEXP" }
             steps {
                 echo 'Deploying release...'
-                sh './BuildApp.sh'
+                sh 'cd ScaldoFragno && export ANDROID_SDK_ROOT='/home/ictadmin/Android/Sdk' && ./gradlew app:buildrelease'
             }
     }
   }
