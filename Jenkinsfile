@@ -11,6 +11,6 @@ pipeline {
             steps {
                 echo 'Deploying release...'
                 sh 'cd Scaldofragno && ./gradlew app:buildrelease '
-            } */
+            }
   }
 }
