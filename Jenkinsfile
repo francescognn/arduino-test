@@ -7,10 +7,10 @@ pipeline {
       }
     }
     stage('DeployApp') {
-            when { tag pattern: "SFrelease-*", comparator: "REGEXP" }
+            when { tag pattern: 'SFrelease-*', comparator: "REGEXP" }
             steps {
                 echo 'Deploying release...'
-                sh 'cd Scaldofragno && ./gradlew app:buildrelease '
+                sh 'cd ScaldoFragno && ./gradlew app:buildrelease '
             }
     }
   }
