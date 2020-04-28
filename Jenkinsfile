@@ -14,7 +14,7 @@ pipeline {
       steps {
         echo 'Deploying release...'
         sh 'cd ScaldoFragno && export ANDROID_SDK_ROOT="/home/ictadmin/Android/Sdk" && ./gradlew app:buildrelease'
-        archiveArtifacts 'ScaldoFragno/app/build/outputs/apk/release/*.apk'
+        archiveArtifacts 'ScaldoFragno/app/build/outputs/apk/release/'
       }
     }
 
