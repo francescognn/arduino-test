@@ -9,7 +9,7 @@ float getVoltage(int);
 String lastLine="";
 int str_len;
 char lastCharRead;
-int CASA = 5;
+int CASA = 77777;
 int PTEMP = 0;
 char numero[11];
 
